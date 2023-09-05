@@ -1,0 +1,137 @@
+.sidebar {
+  background-color: var(--bg-alt);
+  padding: 1rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px solid var(--sidebarBorder);
+  max-height: 78vh;
+}
+
+.projects {
+  overflow: auto;
+}
+
+.projectInput {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--bg);
+  display: grid;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  border: 2px solid var(--sidebarBorder);
+  padding: 1rem;
+  margin-bottom: 37%;
+  animation: smoothPopup 0.2s ease 0s 1 normal forwards;
+}
+
+.projectInputBtns {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+}
+
+.projectInput input {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  border: 2px solid var(--sidebarBorder);
+  background: var(--bg-alt);
+  color: var(--fg);
+}
+
+.projectInput button {
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-alt);
+  color: var(--fg);
+  border: 2px solid var(--sidebarBorder);
+}
+
+.closeProjectInput {
+  padding: 0.5rem 0;
+  background-color: var(--red);
+  color: var(--bg);
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.closeProjectInput:hover {
+  cursor: pointer;
+  background-color: var(--fg);
+  color: var(--bg);
+}
+
+.projectInput button:hover {
+  cursor: pointer;
+  background-color: var(--fg);
+  color: var(--bg);
+}
+
+.newProjectBtn,
+.newTodoBtn,
+.removeTodosBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background: var(--btnBg);
+  color: var(--btnFg);
+  font-family: "Dosis", sans-serif;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newProjectBtn {
+  width: 100%;
+}
+
+.newProjectBtn:hover {
+  cursor: pointer;
+  background-color: var(--fg);
+  color: var(--bg);
+}
+
+.todoProject {
+  font-family: "Dosis", sans-serif;
+  background-color: var(--bg-alt);
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  color: var(--fg);
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.todoProjectClicked {
+  background-color: var(--sidebarSelected);
+}
+
+.todoProject .projectName {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.todoProject:hover {
+  cursor: pointer;
+  background-color: var(--sidebarSelected);
+  border: var(--sidebarBorder);
+}
+
+.activeBtn {
+  background-color: var(--todolistBg);
+}

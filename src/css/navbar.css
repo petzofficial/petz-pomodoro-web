@@ -1,0 +1,111 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 4rem;
+  padding: 0.5rem;
+}
+
+.brand,
+.navbarLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandTitle {
+  font-size: 1.6rem;
+  padding-left: 0.6rem;
+  font-family: "Dosis", sans-serif;
+}
+
+.navBtns {
+  display: flex;
+  align-items: center;
+}
+
+.themeToggle {
+  margin-right: 1rem;
+}
+
+.navbarLinks {
+  background-color: var(--accent);
+  padding: 0.5rem;
+  border-radius: 5rem;
+  box-shadow: var(--shadow);
+  gap: 9px;
+}
+
+.navbarLinks > *,
+.themeToggle,
+.brandTitle {
+  cursor: pointer;
+}
+
+.navbarLinks > * {
+  transition: all 90ms;
+}
+
+.themeToggle,
+.userIcon {
+  border-radius: 50%;
+  background-color: var(--btnBg2);
+  color: var(--btnFg2);
+  padding: 0.6rem;
+}
+
+.themeToggle {
+  background-color: var(--themeToggleBg);
+  color: var(--themeToggleFg);
+}
+
+.settingsBtn {
+  background-color: var(--btnBg2);
+  padding: 0.6rem;
+  border-radius: 5rem;
+}
+
+.settingsBtn:hover {
+  background-color: var(--btnBg);
+  color: var(--btnFg);
+}
+
+.todosBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem;
+  background-color: var(--btnBg);
+  color: var(--btnFg);
+  font-size: 1.1rem;
+  border-radius: 5rem;
+}
+
+.todosIcon {
+  padding-right: 0.3rem;
+}
+
+.navbarLinks a > *:hover {
+  background-color: var(--themeToggleFg);
+  color: var(--themeToggleBg);
+}
+
+@media screen and (max-width: 540px) {
+  .navbar {
+    margin: 0rem;
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .brand {
+    margin-top: 0.6rem;
+  }
+
+  .navBtns {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    align-items: flex-end;
+  }
+  .themeToggle {
+    margin-right: 0.2rem;
+  }
+}

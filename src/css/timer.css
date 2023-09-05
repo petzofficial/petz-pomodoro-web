@@ -1,0 +1,78 @@
+/* radial bar  */
+
+.MainCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 14rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  background-color: var(--bg-alt);
+}
+
+.MainCircle path:nth-child(1) {
+  stroke: var(--inactiveStroke);
+  fill: var(--bg-alt);
+}
+
+.MainCircle path:nth-child(2) {
+  stroke: var(--activeStroke);
+}
+
+.MainCircle text {
+  fill: var(--timerfg);
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+/* SESSION BTNS like play , reset */
+
+.ActionBtns {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: var(--accent);
+  padding: 0.6rem;
+  box-shadow: var(--shadow);
+  border-radius: 5rem;
+}
+
+.playBtn {
+  background-color: var(--activeBar);
+  color: var(--accent);
+  padding: 0.3rem;
+  border-radius: 5rem;
+}
+
+.playBtn:hover {
+  cursor: pointer;
+}
+
+.resetBtn {
+  color: var(--activeBar);
+  padding: 0.4rem;
+  border-radius: 5rem;
+}
+
+.resetBtn:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1460px) {
+  .MainCircle {
+    width: 16rem;
+    height: 16rem;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "petz_money_pomorodo",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "4.4.9",
+    "vite-plugin-solid": "2.7.0"
+  },
+  "dependencies": {
+    "@solidjs/router": "0.8.2",
+    "solid-icons": "1.0.10",
+    "solid-js": "1.7.11"
+  }
+}

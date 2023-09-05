@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  transition: 0.2s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--fg);
+  background-color: var(--bg);
+  font-family: "Dosis", sans-serif;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fg);
+}
+
+/* ===== Scrollbar ==== */
+
+* {
+  scrollbar-width: 0.3rem;
+  scrollbar-color: var(--blue) var(--sidebarSelected);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--todoBg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 5px;
+}

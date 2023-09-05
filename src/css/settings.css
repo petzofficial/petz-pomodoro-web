@@ -1,0 +1,221 @@
+.settings {
+  display: grid;
+  margin: 0.5rem 4rem;
+  padding: 2rem;
+  animation: slideIn 0.2s ease 0s 1 normal forwards;
+  gap: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.miscWidgets {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+}
+
+.goalWidgets {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 1rem;
+  color: var(--activeBar);
+}
+
+.projectedGoal {
+  background-color: var(--volumebg);
+  border-radius: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.projectedGoal h3 {
+  text-align: center;
+  background-color: var(--activeBar);
+  color: var(--bg);
+  padding: 0.3rem;
+}
+
+.projectedGoalContent {
+  background: var(--volumebg);
+  color: var(--activeBar);
+  display: grid;
+}
+
+.projectedGoalText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.projectedGoal .adjustGoal {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  background-color: var(--bg);
+  padding: 0.5rem;
+  margin: 1rem 3rem;
+  margin-bottom: 0;
+  border-radius: 0.5rem;
+  gap: 0.5rem;
+  color: var(--fg);
+}
+
+.changeHrsBtn {
+  transition: color 0.2s ease-in;
+  color: var(--activeBar);
+}
+
+.changeHrsBtn:hover {
+  cursor: pointer;
+  color: var(--fg);
+}
+
+.goalProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  background-color: var(--volumebg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.goalProgress path:nth-child(1) {
+  stroke: var(--inactiveStroke);
+  fill: var(--volumebg);
+}
+
+.goalProgress path:nth-child(2) {
+  stroke: var(--activeStroke);
+}
+
+.goalProgress text {
+  fill: var(--timerfg);
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+/* Adjust volume */
+
+#volumeContainer {
+  background: var(--volumebg);
+  padding: 0.5rem 2rem 1.5rem 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#sliderContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 10fr 1fr;
+}
+
+.volumePercentage {
+  padding: 0.6rem;
+  background: var(--activeBar);
+  color: var(--bg);
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+
+#slider {
+  margin: auto;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+::-webkit-slider-runnable-track {
+  background: var(--bg);
+}
+
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0px;
+  height: 2.5rem;
+  box-shadow: -100vw 0 0 100vw var(--activeBar);
+}
+
+::-moz-range-track {
+  background: var(--bg);
+  height: 2.5rem;
+}
+
+::-moz-range-thumb {
+  width: 0px;
+  box-shadow: -100vw 0 0 100vw var(--fg);
+}
+
+::-moz-range-progress {
+  background-color: var(--activeBar);
+}
+
+::-ms-fill-lower {
+  background: var(--activeBar);
+}
+
+::-ms-thumb {
+  background: var(--bg);
+  height: 2.5rem;
+  width: 0px;
+  box-sizing: border-box;
+}
+
+::-ms-ticks-after {
+  display: none;
+}
+
+::-ms-ticks-before {
+  display: none;
+}
+
+::-ms-track {
+  background: var(--activeBar);
+  color: transparent;
+  height: 40px;
+  border: none;
+}
+
+::-ms-tooltip {
+  display: none;
+}
+
+@media screen and (max-width: 540px) {
+  .settings {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  #volumeContainer {
+    padding: 0.5rem repeat(3, 2rem);
+  }
+
+  .miscWidgets {
+    grid-template-columns: 1fr;
+    margin: 0rem;
+    gap: 1rem;
+  }
+
+  .goalWidgets {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .currentProgress {
+    width: auto;
+  }
+}
