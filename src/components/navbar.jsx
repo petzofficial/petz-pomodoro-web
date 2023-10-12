@@ -20,7 +20,7 @@ function BrandInfo() {
       <div class="brand">
         <img src="./assets/logo.png" width="50" height="50" class="brandLogo"/>
 
-        <div class="brandTitle">PetZ Money Pomodoro</div>
+        <div class="brandTitle">PetZ</div>
       </div>
     </Link>
   );
@@ -77,7 +77,7 @@ function NavbarLinks() {
 function Btns() {
   return (
     <div class="navBtns">
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       <NavbarLinks />
     </div>
   );
